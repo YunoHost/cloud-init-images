@@ -5,7 +5,7 @@ suite_nb=12
 
 echo "Download debian genericcloud image (with cloud-init inside)"
 rm -f debian-${suite_nb}.qcow2
-wget https://cloud.debian.org/images/cloud/${suite}/latest/debian-${suite_nb}-genericcloud-amd64.qcow2 -o debian-${suite_nb}.qcow2
+wget https://cloud.debian.org/images/cloud/${suite}/latest/debian-${suite_nb}-genericcloud-amd64.qcow2 -0 debian-${suite_nb}.qcow2
 
 echo "Grows image"
 cp debian-${suite_nb}.qcow2 yunohost-${suite_nb}.qcow2
