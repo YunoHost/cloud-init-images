@@ -1,4 +1,5 @@
 #!/bin/bash
+# Fix strange issue where the /etc/resolv.conf is a symlink onto /run/systemd.../resolv.conf
 rm -f /etc/resolv.conf
 echo 'nameserver 89.234.141.66' > /etc/resolv.conf
 echo 'nameserver 185.233.100.100' >> /etc/resolv.conf
