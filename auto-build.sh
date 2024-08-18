@@ -18,4 +18,4 @@ echo "Reduce the image's size"
 virt-sparsify --in-place yunohost-${suite_nb}.qcow2
 
 echo "Compress"
-#xz -v yunohost-${suite_nb}.qcow2
+xz -v yunohost-${suite_nb}.qcow2
