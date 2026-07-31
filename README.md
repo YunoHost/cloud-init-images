@@ -1,8 +1,8 @@
 # cloud-init-images
-Build cloudinit images for YunoHost
+
+Build cloud-init images for YunoHost
 
 ```
 apt install libguestfs-tools
-bash ./auto-build.sh
+./auto-build.sh
 ```
-
