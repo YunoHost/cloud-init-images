@@ -14,8 +14,8 @@ IMAGE_URL=https://cloud.debian.org/images/cloud/${suite}/latest/debian-${suite_n
 curl -L -o "debian-$suite_nb.qcow2" --time-cond "debian-$suite_nb.qcow2" --remote-time "$IMAGE_URL"
 
 progress "Growing image..."
-cp debian-${suite_nb}.qcow2 yunohost-${suite_nb}.qcow2
-qemu-img resize yunohost-${suite_nb}.qcow2 8G
+cp "debian-${suite_nb}.qcow2" "yunohost-${suite_nb}.qcow2"
+qemu-img resize "yunohost-${suite_nb}."qcow2 8G
 
 progress "Customizing the image by running install script..."
 virt-customize \
@@ -28,7 +28,7 @@ virt-customize \
     --firstboot ./firstboot.sh
 
 progress "Reducing the image's size..."
-virt-sparsify --in-place yunohost-${suite_nb}.qcow2
+virt-sparsify --in-place "yunohost-${suite_nb}.qcow2"
 
 progress "Compressing the image..."
-xz --keep --force --verbose yunohost-${suite_nb}.qcow2
+xz --keep --force --verbose "yunohost-${suite_nb}.qcow2"
