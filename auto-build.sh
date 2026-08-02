@@ -33,4 +33,4 @@ progress "Reducing the image's size..."
 virt-sparsify --in-place yunohost-${suite_nb}.qcow2
 
 progress "Compressing the image..."
-xz -v yunohost-${suite_nb}.qcow2
+xz --keep --force --verbose yunohost-${suite_nb}.qcow2
