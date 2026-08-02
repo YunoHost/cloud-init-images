@@ -15,7 +15,7 @@ curl -L -o "debian-$suite_nb.qcow2" --time-cond "debian-$suite_nb.qcow2" --remot
 
 progress "Growing image..."
 cp "debian-${suite_nb}.qcow2" "yunohost-${suite_nb}.qcow2"
-qemu-img resize "yunohost-${suite_nb}."qcow2 8G
+qemu-img resize "yunohost-${suite_nb}.qcow2" 8G
 
 progress "Customizing the image by running install script..."
 virt-customize \
