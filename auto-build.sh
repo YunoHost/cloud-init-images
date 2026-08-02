@@ -22,7 +22,6 @@ virt-customize \
     -v \
     -a "yunohost-${suite_nb}.qcow2" \
     --hostname yunohost \
-    --update \
     --install 'curl' \
     --upload './cloud.cfg:/etc/cloud/cloud.cfg' \
     --run-command "curl https://install.yunohost.org/${suite} | bash -s -- -a " \
