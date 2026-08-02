@@ -11,8 +11,7 @@ progress() {
 
 progress "Downloading debian genericcloud image (with cloud-init inside)..."
 IMAGE_URL=https://cloud.debian.org/images/cloud/${suite}/latest/debian-${suite_nb}-genericcloud-${arch}.qcow2
-rm -f debian-${suite_nb}.qcow2
-wget "$IMAGE_URL" -O debian-${suite_nb}.qcow2
+curl -L -o "debian-$suite_nb.qcow2" --time-cond "debian-$suite_nb.qcow2" --remote-time "$IMAGE_URL"
 
 progress "Growing image..."
 cp debian-${suite_nb}.qcow2 yunohost-${suite_nb}.qcow2
